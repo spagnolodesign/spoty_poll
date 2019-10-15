@@ -19,7 +19,9 @@ Vote.destroy_all
 contest = Contest.create! topic: "Rock's Songs", start_date: Date.today - 1, end_date: Date.today + 2, state: 0
 
 # Adding songs to a contest
-contest.songs << Song.first(5)
+rand(5..10).times { 
+  contest.selections.create! song: Song.all.sample, user: User.all.sample 
+}
 
 contest.selections.each do |selection|
   rand(1..10).times { Vote.create! user: User.all.sample, selection: selection }
