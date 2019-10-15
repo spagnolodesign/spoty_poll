@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_10_13_213355) do
     t.bigint "song_id"
     t.bigint "contest_id"
     t.bigint "user_id"
+    t.integer "votes_count", default: 0
     t.index ["contest_id"], name: "index_selections_on_contest_id"
     t.index ["song_id"], name: "index_selections_on_song_id"
     t.index ["user_id"], name: "index_selections_on_user_id"

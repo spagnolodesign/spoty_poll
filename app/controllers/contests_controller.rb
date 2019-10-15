@@ -1,16 +1,20 @@
 class ContestsController < ApplicationController
-  before_action :auth, only: [:current_contest_selections]
-  before_action :get_current_contest, only: [:current_contest, :current_contest_selections]
+  before_action :auth, only: [:show_contest_selections, :show_contest_ranking]
+  before_action :get_current_contest, only: [:show, :show_contest_selections, :show_contest_ranking]
 
-  def current_contest
+  def show
     render json: @contest
   end
 
-  def current_contest_selections
+  def show_contest_selections
     songs = @contest.songs
     render json: songs, current_user: @current_user, contest: @contest
   end
 
+  def show_contest_ranking
+    selections = @contest.selections.order_by_most_votes
+    render json: selections, current_user: @current_user, contest: @contest
+  end
 
   private
     # The last current active contest.
