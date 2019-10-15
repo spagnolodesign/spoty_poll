@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_10_13_213355) do
 
   create_table "contests", force: :cascade do |t|
     t.string "topic"
-    t.integer "state"
+    t.integer "state", default: 0
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", null: false
