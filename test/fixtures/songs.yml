@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  artist: MyString
-  album: MyString
-  length: 1.5
+  title: Mars
+  artist: Dimension
+  album: Beauvius
+  length_ms: 1.5
+  spotify_id: 2xTej0cHbqpDUG5QHdWVs6
 
 two:
   title: MyString
   artist: MyString
   album: MyString
-  length: 1.5
+  length_ms: 1.5
+  spotify_id: 29HrhFZ3eaJrB7fKuZxgy7

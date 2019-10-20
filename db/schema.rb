@@ -38,7 +38,8 @@ ActiveRecord::Schema.define(version: 2019_10_13_213355) do
     t.string "title"
     t.string "artist"
     t.string "album"
-    t.float "length"
+    t.string "spotify_id"
+    t.float "length_ms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

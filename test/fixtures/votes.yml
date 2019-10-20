@@ -2,10 +2,8 @@
 
 one:
   user: one
-  song: one
   selection: one
 
 two:
   user: two
-  song: two
   selection: two

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  state: 1
+  topic: Some topic
+  state: 0
   start_date: 2019-10-11
   end_date: 2019-10-11
 
 two:
-  name: MyString
-  state: 1
-  start_date: 2019-10-11
-  end_date: 2019-10-11
+  topic: Some challenges
+  state: 0
+  start_date: 2019-10-18
+  end_date: 2019-10-29

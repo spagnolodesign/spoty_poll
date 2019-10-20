@@ -1,5 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+require 'securerandom'
+
 def random_minutes
   rand(2..3).to_s + ":#{rand(0..5)}0".to_s
 end
@@ -13,7 +15,7 @@ Vote.destroy_all
 10.times { User.create! username: Faker::FunnyName.name } 
 
 # Create Sogss
-10.times { Song.create!(title: Faker::Music::GratefulDead.song, album: Faker::Music.album, artist: Faker::Music::GratefulDead.player, length: random_minutes) }
+10.times { Song.create!(title: Faker::Music::GratefulDead.song, album: Faker::Music.album, artist: Faker::Music::GratefulDead.player, length_ms: random_minutes, spotify_id: SecureRandom.hex) }
 
 # Create a Contest
 contest = Contest.create! topic: "Rock's Songs", start_date: Date.today - 1, end_date: Date.today + 2, state: 0
