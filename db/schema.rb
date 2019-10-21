@@ -39,13 +39,14 @@ ActiveRecord::Schema.define(version: 2019_10_13_213355) do
     t.string "artist"
     t.string "album"
     t.string "spotify_id"
-    t.float "length_ms"
+    t.integer "length_ms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -37,7 +37,7 @@ class SpotyAPI
       title: data["name"],
       artist: data["artists"][0]["name"],
       album: data["album"]["name"],
-      length_ms: data["dataduration_ms"],
+      length_ms: data["duration_ms"],
     }
     Song.find_or_create_by obj
   end
