@@ -15,6 +15,7 @@
 
 # Ignore uploaded files in development
 /storage/*
+/public/system/songs/album_covers/*
 
 .byebug_history
 
