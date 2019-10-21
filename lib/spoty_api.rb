@@ -39,7 +39,10 @@ class SpotyAPI
       album: data["album"]["name"],
       length_ms: data["duration_ms"],
     }
-    Song.find_or_create_by obj
+    url_image = data["album"]["images"][0]["url"]
+    song = Song.find_or_create_by obj
+    song.album_cover_from_url(url_image)
+    song
   end
 
 

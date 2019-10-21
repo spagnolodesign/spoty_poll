@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_13_213355) do
+ActiveRecord::Schema.define(version: 2019_10_21_092800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,10 @@ ActiveRecord::Schema.define(version: 2019_10_13_213355) do
     t.integer "length_ms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "album_cover_file_name"
+    t.string "album_cover_content_type"
+    t.bigint "album_cover_file_size"
+    t.datetime "album_cover_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
