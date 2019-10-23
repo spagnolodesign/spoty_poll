@@ -19,7 +19,11 @@ User.create!(email: 'jon@snow.com', password: '123456')
 10.times { User.create!(email: Faker::Internet.email, password: '123456') } 
 
 # Create Sogss
-10.times { Song.create!(title: Faker::Music::GratefulDead.song, album: Faker::Music.album, artist: Faker::Music::GratefulDead.player, length_ms: random_minutes, spotify_id: SecureRandom.hex) }
+10.times { 
+  song = Song.new(title: Faker::Music::GratefulDead.song, album: Faker::Music.album, artist: Faker::Music::GratefulDead.player, length_ms: random_minutes, spotify_id: SecureRandom.hex) 
+  song.album_cover = File.open("images/cover.jpeg")
+  song.save
+}
 
 # Create a Contest
 contest = Contest.create! topic: "Rock's Songs", start_date: Date.today - 1, end_date: Date.today + 2, state: 0

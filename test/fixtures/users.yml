@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  username: Mario
+  email: mario@fakemail.com
+  password_digest: '123456'
 
 two:
-  username: Luigi
+  email: luigi@fakemail.com
+  password_digest: '123456'
